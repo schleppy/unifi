@@ -9,14 +9,14 @@ type ResponseEnvelope struct {
 
 type ResponseFirewallRules struct {
 	Meta ResponseMetaData            `json:"meta"`
-	Data []ResponseFirewallRulesData `json:"data"`
+	Data []FirewallRule `json:"data"`
 }
 
 type ResponseMetaData struct {
 	Rc string `json:"rc"`
 }
 
-type ResponseFirewallRulesData struct {
+type FirewallRule struct {
 	ID                    string   `json:"_id,omitempty"`
 	Ruleset               string   `json:"ruleset"`
 	RuleIndex             int      `json:"rule_index"`
